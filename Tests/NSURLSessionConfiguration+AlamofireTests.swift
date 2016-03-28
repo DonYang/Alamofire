@@ -26,7 +26,7 @@ extension NSURLSessionConfiguration {
     static func backgroundSessionConfigurationForAllPlatformsWithIdentifier(identifier: String) -> NSURLSessionConfiguration {
         let configuration: NSURLSessionConfiguration
 
-        if #available(OSX 10.10, *) {
+        if #available(iOS 8.0, OSX 10.10, *) {
             configuration = NSURLSessionConfiguration.backgroundSessionConfigurationWithIdentifier(identifier)
         } else {
             configuration = NSURLSessionConfiguration.backgroundSessionConfiguration(identifier)
